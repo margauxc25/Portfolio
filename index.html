@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Portfolio Margaux Coppi</title>
+    </head>
+    <body>
+        <!-- Header  -->
+        <header id="accueil">
+            <nav>
+                <img src="images/logo_m.png" class="logo" alt="Logo M blanc dans un rectangle blanc">
+                <div>
+                    <a href="https://github.com/margauxc25" target="_blank"><img class="github" src="images/github-logo-white.png" alt="Logo github"></a>
+                    <a href="https://www.linkedin.com/in/margaux-llorens-coppi-751676210/" target="_blank"><img class="linkedin" src="images/linkedin.png" alt="Logo linkedin"></a>
+                    <div class="menu-btn">
+                        <div class="menu-btn__burger">  
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="nom">
+                <h1>Margaux Coppi</h1>
+                <h2>Developpeuse Web en devenir</h2>
+            </div>
+            </header>
+
+        <!-- Partie principale -->
+        <main>
+        <!-- Première section "À propos" -->
+            <section id="apropos" class="apropos">
+                <h3><img src="images/meteor.png" alt="">À propos de moi</h3>
+                <article class="presentation">
+                    <div>
+                        <h4>Bienvenue sur mon portfolio</h4>
+                        <p>Je suis actuellement en formation </p> 
+                        <p>développeur web/web mobile à </p>
+                        <p>l'Acess code school de Besançon.</p>
+                    </div>
+                    <img class="astronaute" src="images/pete_conrad.jpg" alt="">  
+                </article>
+            </section>
+
+        <!-- Deuxième section "compétences" -->
+            <section id="competences" class="skills">
+                <img src="images/Polygon 1.png" alt="" class="polygon">
+                <h3>Compétences <img src="images/fusée.png" alt="" class="fusee"></h3>
+                <div class="container">
+                    <div class="bar learning" data-skill="HTML/CSS"></div>
+                    <div class="bar back basic" data-skill="javascript"></div>
+                    <div class="bar back intermediate" data-skill="PHP/MySQL"></div>
+                    <div class="bar front advanced" data-skill="Photoshop/Illustrator"></div>
+                </div>
+                <article class="skills1-2">
+                    <div class="skills1">
+                        <p>
+                            Développement des parties front-end et back-end.
+                        </p>
+                    </div>
+                    <div class="skills2">
+                            Wireframe et maquettage du site.
+                    </div>
+                </article>
+            </section>
+        <!-- troixième section "Mes réalisations" -->
+            <section id="realisations" class="realisations">
+                <img src="images/Polygon 2.png" class="polygon" alt="">
+                <h3>Mes réalisations</h3>
+                <div class="slideshow-container">
+
+                    <!-- Slides -->
+                    <div class="mySlides fade">
+                    <img src="images/réa4.PNG" alt="" style="width:100%">
+                    <div class="text">
+                        <h5>AFA</h5>
+                        <p> Projet sur l'accessibilité</p>
+                    </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                    <img src="images/réa5.PNG" alt="" style="width:100%">
+                    <div class="text">
+                        <h5>Wedigo </h5>
+                        <p> Projet de création de site avec widgets </p>
+                    </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                    <img src="images/réa6.PNG" alt="" style="width:100%">
+                    <div class="text">
+                        <h5>MRM</h5>
+                        <p> Projet de création de site onepage sur "" de php.</p>
+                    </div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+            </section>
+        <!--Quatrième section "Contact" -->
+            <section id="contact" class="contact">
+                        <h3>Contact</h3>
+                        <p class="telp"><img src="images/tel.png" class="tel" alt="">06.63.84.28.27</p>
+                        <p class="telp"><img src="images/enveloppe.png" class="enveloppe" alt="">margauxcoppipro@gmail.com</p>
+                        <div class="download">
+                            <img src="images/cv.png" class="cv" alt="">
+                            <div class="button">
+                            <p>Vous pouvez télécharger mon cv</p>
+                            <button type="button"> Download</button>
+                            </div>
+                        </div>
+            </section>
+
+        </main>
+        <!-- Footer -->
+        <footer>
+            <img src="images/logo_m.png" class="logo" alt="">
+            <div class="ancres">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos de moi</a>
+            <a href="#competences">Compétences</a>
+            <a href="#realisations">Mes réalisations</a>
+            <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <a href="https://github.com/margauxc25" target="_blank"><img class="github" src="images/github-logo-white.png" alt="Logo github"></a>
+                <a href="https://www.linkedin.com/in/margaux-llorens-coppi-751676210/" target="_blank"><img class="linkedin" src="images/linkedin.png" alt="Logo linkedin"></a>
+            </div>
+        </footer>
+        
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+            crossorigin="anonymous">
+        </script>
+        <script  type="text/javascript" src="script.js"></script>
+    </body>
+</html>

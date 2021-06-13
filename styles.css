@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0f0f0f;
+}
+/* Header */
+header{
+    width: 100%;
+    height: 100vh;
+    background:url("images/lune.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+.logo{
+    height: 4.5rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.github{
+    height: 4.5rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.nom{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:  10%;
+}
+
+h1{
+    font-size: 5rem;
+    border-bottom: 0.5rem white solid ;
+    padding-bottom: 2rem;
+}
+
+h2{
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.nom p:nth-child(2){
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkedin{
+    height: 60px;
+    margin-right: 3rem;
+}
+/* Menu burger */
+.menu-btn {
+    float: right;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before, .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+    transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+/* Fin header - fin menu burger */
+/* Section À propos de moi */
+.apropos{
+    height: 110vh;
+    width: 100%;
+    color: #fff;
+}
+
+.apropos article{
+    margin-top: 8%
+}
+
+.presentation{
+    display: flex;
+    justify-content: space-between;
+}
+
+article div{
+    margin-left: 15rem;
+    margin-top: 5rem;
+}
+
+.astronaute{
+    height: 25rem;
+    border: #fff 3px solid;
+    padding: 3rem;
+
+}
+
+.apropos h3{
+    padding-left: 40%;
+    font-size: 2rem;
+    text-decoration: underline #68A6DF;
+    padding-top: 2rem;
+}
+
+.apropos p, h4{
+    font-size: 1.5rem;
+}
+
+.apropos h4{
+    margin-bottom: 2rem;
+    text-decoration: underline #68A6DF;
+    
+}
+/* Section compétences */
+.skills{
+    background-color: white;
+}
+
+.skills p{
+    color: #fff;
+}
+
+.polygon{
+    margin: 0;
+    height: 15rem;
+    padding-left: 50%;
+}
+
+.skills h3{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline #68A6DF;
+    margin-bottom: 2rem;
+}
+
+.fusee{
+    padding-left: 1rem;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+}
+/* Animations barres de compétences */
+@keyframes load{
+    from {
+    width: 0%
+    }
+}
+
+@-webkit-keyframes load{
+    from {
+    width: 0%
+    }
+}
+
+@-moz-keyframes load{
+    from {
+    width: 0%
+    }
+}
+
+@-o-keyframes load{
+    from {
+    width: 0%
+    }
+}
+
+.bar{
+    background-color: #EEE;
+    padding: 2px;
+    border-radius: 15px;
+    margin-top: 2rem;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.bar::before{
+    content:  attr(data-skill);
+    background-color: #68A6DF;
+    display: inline-block;
+    padding: 10px 0 10px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+}
+
+.bar.front::before{
+    background-color: #68A6DF;
+}
+
+.bar.back::before{
+    background-color: #68A6DF;
+}
+
+.bar.learning::before{
+    width: calc(20% - 10px);
+}
+
+.bar.basic::before{
+    width: calc(40% - 10px);
+}
+.bar.intermediate::before{
+    width: calc(60% - 10px);
+}
+
+.bar.advanced::before{
+    width: calc(80% - 10px);
+}
+
+.bar.expert::before{
+    width: calc(100% - 10px);
+}
+
+.skills1-2{
+    display: flex;
+justify-content: center;
+}
+
+.skills1{
+    background-color: #0f0f0f;
+    color: #fff;
+    width: 8rem;
+    padding: 3rem 5rem 3rem 3rem;
+    border-radius: 0px 0px 100px 0px;
+    margin: 5rem 1rem 5rem 0;
+    font-size: 1.5rem;
+}
+
+.skills2{
+    background-color: #0f0f0f;
+    color: #fff;
+    width: 8rem;
+    padding: 3rem 3rem 3rem 5rem;
+    border-radius: 100px 0px 0px 0px;
+    margin: 5rem 0 5rem 1rem;
+    font-size: 1.5rem;
+}
+/* Section Mes réalisations */
+.realisations{
+    color: white;
+}
+
+.realisations h3{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline #68A6DF;
+    margin-bottom: 2rem;
+}
+/* Slides */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #68A6DF;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text{
+    margin-bottom: 4rem;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Section Contact */
+.contact{
+    font-size: 1.5rem;
+    background-color: #fff;
+    height: 100vh;
+}
+
+.contact h3{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline #68A6DF;
+    padding-top: 2rem;
+}
+
+.tel{
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+.enveloppe{
+    margin-left: 13%;
+    margin-right: 8%;
+}
+
+.cv{
+    margin-left: 16%;
+    margin-right: 8%;
+    margin-top: 8rem ;
+    height: 10rem;
+}
+
+.contact p{
+    margin: 5rem 5rem 0 5rem;
+}
+
+.contact div{
+    display: flex;
+    margin-top: 5rem;
+}
+
+.contact div p{
+    border-top: 5px solid #68A6DF;
+    padding-top: 5rem;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+}
+
+button, button::after {
+    width: 10vw;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, transparent 5%, #68A6DF 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    outline: transparent;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 15%;
+}
+
+    button::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'Download';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #68A6DF 5%);
+    text-shadow: -3px -3px 0px #000, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+    }
+    10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+    }
+    20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+    }
+    30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+    }
+    40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+    }
+    50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+    }
+    60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+    }
+    70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+    }
+    80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+    }
+    90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+    }
+    100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+    }
+}
+
+/* Footer */
+footer{
+    background-color: #0f0f0f;
+    color: #fff;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+footer a:hover{
+    color: #68A6DF;
+}
+.github2{
+    height: 4.5rem;
+    margin-left: 3rem;
+}
+
+@media screen and (max-width : 980px){
+
+    
+    header{
+        height: 45vh;
+        background-size: 100% 40vh;
+    }
+    header h1, h2{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .nom{
+        padding: 0;
+    }
+
+    .github, .linkedin{
+        height: 2rem;
+    }
+
+    .logo{
+        height: 3rem;
+    }
+
+    .apropos{
+        height: 60vh; 
+    }
+
+    .presentation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentation div{
+        margin-top: 0rem;
+    }
+    .apropos p, h4{
+    font-size: 1rem;
+    }
+
+    .apropos h3{
+        padding-left: 15%;
+        font-size: 1.5rem;
+        text-decoration: underline #68A6DF;
+    }
+    .apropos h3 img{
+        height: 3rem;
+    }
+    .apropos div{
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .astronaute{
+        height: 10rem;
+        width: 10rem;
+        padding: 1rem;
+    }
+
+    .polygon{
+        margin: 0;
+        height: 5rem;
+        padding-left: 25%;   
+    }
+
+    .skills h3{
+        padding-left: 10%;
+        font-size: 1.5rem;
+        text-decoration: underline #68A6DF;
+    }
+    .skills h3 img{
+        height: 3rem;
+    }
+
+    .skills1-2{
+    display: flex;
+    flex-direction: row;
+    }
+    
+    .skills1{
+        background-color: #0f0f0f;
+        color: #fff;
+        width: 6rem;
+        padding: 1rem 3rem 1rem 2rem;
+        border-radius: 0px 0px 100px 0px;
+        margin: 2rem 1rem 2rem 0;
+        font-size: 1rem;
+    }
+    
+    .skills2{
+        background-color: #0f0f0f;
+        color: #fff;
+        width: 8rem;
+        padding: 2rem 2rem 2rem 1rem;
+        border-radius: 100px 0px 0px 0px;
+        margin: 2rem 0 2rem 1rem;
+        font-size: 1rem;
+        text-align: right;
+    }
+
+    .realisations p,h5{
+        margin-left: 1rem;
+    }
+
+    .contact{
+        font-size: 1.5rem;
+        height: 90vh;
+    }
+
+    .footer{
+        background-color: #0f0f0f;
+        color: #fff;
+        height: 20vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    footer a{
+        color: #fff;
+        text-decoration: none;
+        margin-left: 2rem;
+    }
+    
+    .github2{
+        height: 4.5rem;
+        margin-left: 3rem;
+    }
+    .contact h3{
+        padding-left: 10%;
+        font-size: 1.5rem;
+        text-decoration: underline #68A6DF;
+    }
+    
+    .tel{
+        margin-right: 20%;
+        height: 3rem;
+        margin-left:0 ;
+    }
+    
+    .enveloppe{
+        margin-right: 8%;
+        margin-left:0 ;
+        height: 2.5rem;
+    }
+    
+    .cv{
+        margin: 60% 1rem 0 0 ;
+        height: 5rem;
+    }
+    
+    .contact p{
+        margin: 5rem 5rem 0 0;
+    }
+    
+    .contact div{
+        display: flex;
+        margin-top: 5rem;
+    }
+    
+    .contact div p{
+        border-top: 5px solid #68A6DF;
+        padding-top: 5rem; 
+        font-size: 1rem;
+    }
+    
+    .button{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    button{
+    width: 25vw;
+    height: 5rem;
+    font-size: 1rem;
+    background: linear-gradient(45deg, transparent 5%, #68A6DF 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    outline: transparent;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 15%;
+    }
+
+    .telp{
+        font-size: 1rem;
+    }
+
+    footer{
+        background-color: #0f0f0f;
+        color: #fff;
+        height: 20vh;
+        
+    }
+    
+    footer a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .github2{
+        height: 2rem;
+        margin-left: 3rem;
+    }
+
+    .button p{
+        margin-top: 0;
+    }
+
+    footer img:nth-child(1){
+        margin: 0 0 0 1rem;
+        height: 2rem;
+    }
+
+    .ancres{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ancres a{
+        margin-bottom: 0.5rem;
+    }
+}
